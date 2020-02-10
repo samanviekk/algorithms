@@ -22,6 +22,18 @@ class Stack:
     def getMax(self):
         return self.maxItems[-1]
 
+    def popMax(self):
+        x = self.maxItems[-1]
+        temp = []
+        while self.items[-1] != x:
+            y = self.items[-1]
+            temp.append(y)
+            self.items.pop()
+        self.items.pop()
+        self.maxItems.pop()
+
+        for j in range(len(temp)-1, -1, -1):
+            self.items.append(temp[j])
 
 s = Stack()
 A = [5, 3, 9, 1, 2]
@@ -29,9 +41,8 @@ for i in range(0, len(A)):
     s.push(A[i])
 print("max item is ", s.getMax())
 print("top item is", s.top())
-s. pop()
-s. pop()
-s. pop()
+s. popMax()
+print("top item is", s.top())
 print("max item is ", s.getMax())
 
 
