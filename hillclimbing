@@ -1,0 +1,25 @@
+import random
+import string
+
+sen = "methinks it is like a weasel"
+
+def generateRandomString(strlen = 27):
+
+        letters = string.ascii_letters + ' '
+        return  ''.join(random.choice(letters) for i in range(strlen))
+
+
+def score():
+    score = 0
+    if generateRandomString() == sen:
+        score += 1
+    return score
+
+#def callmain():
+
+
+
+print (generateRandomString())
+print (generateRandomString())
+print (generateRandomString(10))
+print (generateRandomString(5))

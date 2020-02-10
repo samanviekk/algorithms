@@ -1,0 +1,1 @@
+print('Sreecha ' * 20, end= ",")
