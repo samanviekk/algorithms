@@ -9,6 +9,9 @@ class Stack:
         self.items.append(x)
 
     def pop(self):
+        if self.empty():
+            raise IndexError('pop(): empty stack')
+
         if self.items[-1] == self.maxItems[-1]:
             self.maxItems.pop()
         self.items.pop()
@@ -20,6 +23,8 @@ class Stack:
         return self.items[-1]
 
     def getMax(self):
+        if self.empty():
+            raise IndexError('max(): empty stack')
         return self.maxItems[-1]
 
     def popMax(self):
@@ -39,11 +44,19 @@ s = Stack()
 A = [5, 3, 9, 1, 2]
 for i in range(0, len(A)):
     s.push(A[i])
+print("items list ", s.items)
+print("maxitems list ", s.maxItems)
 print("max item is ", s.getMax())
+s.pop()
+s.pop()
+s.pop()
+print("max item after pop", s.getMax())
 print("top item is", s.top())
-s. popMax()
-print("top item is", s.top())
-print("max item is ", s.getMax())
+print(s.items)
+s.popMax()
+print(s.maxItems)
+print(s.items)
+
 
 
 
