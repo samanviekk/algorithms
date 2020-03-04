@@ -1,12 +1,17 @@
-from queue import LifoQueue
+def is_wellformed(s):
+    left_chars = []
+    lookup = {'(': ')', '[': ']', '{': '}'}
+    for c in s:
+        if c in lookup:
+            left_chars.append(c)
+        elif not left_chars:
+            return False
+        else:
+            key = left_chars.pop()
+            if lookup[key] != c:
+                return False
+    return True if len(left_chars) == 0 else False
 
-mystack = LifoQueue()
 
-def wellformed(mylist):
-
-    for i in range(0, len(mylist) - 1):
-        if mylist[i] == '(':
-            mystack.get(mylist[i])
-
-        if mylist[i] == ')':
-            if mystack.put()
+mystr = '([](){})'
+print(is_wellformed(mystr))
