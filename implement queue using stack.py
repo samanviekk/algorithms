@@ -41,7 +41,7 @@ class MyQueue:
         """
         Returns whether the queue is empty.
         """
-        if len(self.items) == 0 and len(self.tempQueue) == 0:
+        if len(self.items) == 0: #and len(self.tempQueue) == 0:
             return True
         else:
             return False
@@ -50,13 +50,11 @@ obj = MyQueue()
 x = [5, 3, 2, 9, 1, 8]
 for i in range(0, len(x)):
     obj.push(x[i])
-
-param_2 = obj.pop()
-print(param_2)
-
+print(obj.items)
 print(obj.pop())
+print(obj.pop())
+print(obj.peek())
+print(obj.empty())
+print(obj.items)
+print(obj.tempQueue)
 
-param_3 = obj.peek()
-print(param_3)
-param_4 = obj.empty()
-print(param_4)
