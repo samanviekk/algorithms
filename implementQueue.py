@@ -18,11 +18,11 @@ class Queue:
         return len(self.items)
 
 
+
 x = [3, 2, 8, 1]
 obj = Queue()
 for i in range(0, len(x)):
     obj.push(x[i])
 print(obj.pop())
 print(obj.peek())
-print(obj.count())
-print(obj.empty())
+
