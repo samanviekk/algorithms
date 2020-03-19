@@ -17,6 +17,6 @@ def plus_one(A):
         A.append(0)
     return A
 
-digits = [1, 3, 9]
+digits = [9, 9, 9]
 print(plus_one_naive(digits))
 print(plus_one(digits))

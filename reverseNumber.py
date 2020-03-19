@@ -5,10 +5,20 @@ print(y)
 
 def reverseNumber(num):
     rev = 0
+    is_neg = False
+    if num < 0:
+        is_neg = True
+        num = -num
     while(num > 0):
         rev = (rev * 10) + (num % 10)
         num = num // 10
-    print("Reverse of this number is = %d" %rev)
+    if is_neg:
+        return -rev
+    else:
+        return rev
+   # print("Reverse of this number is = %d" %rev)
+
+
 
 num = int(input("Enter a number: "))
-reverseNumber(num)
+print(reverseNumber(num))

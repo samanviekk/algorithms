@@ -8,11 +8,15 @@ def reverse(arr, s, e):
 
 
 def rotateArray(arr, d):
-    reverse(arr, 0, d - 1)
-    reverse(arr, d, len(arr) - 1)
+    reverse(arr, 0, d)
+    reverse(arr, d + 1, len(arr) - 1)
     reverse(arr, 0, len(arr) - 1)
 
+arr = [1, 2, 3, 4, 5, 6, 7]
+rotateArray(arr, 3)
+print(arr)
 
+'''
 # Number of Test Cases
 T = int(input())
 # fore each test case, call the rotateArray
@@ -27,3 +31,4 @@ for i in range(T):
     # Now that you have inputs, call the function
     rotateArray(arr, R)
     print(arr)
+'''
