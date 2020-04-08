@@ -17,7 +17,10 @@ def is_palindrome(s):
 
 s = "A man, a plan, a canal: Panama"
 s1 = "race a car"
+s2 = ""
+print(is_palindrome(s))
 print(is_palindrome(s1))
+print(is_palindrome(s2))
 
 
 

@@ -32,7 +32,6 @@ def two_sum1(nums, x):
 
 
 def has_three_sum(A, t):
-    #return any(two_sum1(A, t - a) for a in A)
     for i in range(len(A)):
         result = two_sum1(A[i+1:], t - A[i])
         print(result)
